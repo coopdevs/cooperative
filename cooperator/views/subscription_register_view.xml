@@ -6,7 +6,6 @@ SPDX-FileCopyrightText: 2018 Coop IT Easy SC
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <odoo>
-
     <record id="subscription_register_tree" model="ir.ui.view">
         <field name="name">subscription.register.tree</field>
         <field name="model">subscription.register</field>
@@ -111,5 +110,4 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         <field name="view_id" ref="subscription_register_tree" />
         <field name="search_view_id" ref="view_subscription_register_filter" />
     </record>
-
 </odoo>

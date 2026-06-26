@@ -55,7 +55,7 @@ class CooperatorCase(TransactionCase, CooperatorTestMixin):
         invoice = self.subscription_request_1.capital_release_request
         self.assertEqual(
             invoice.name,
-            "SUBJ/{year}/001".format(year=date.today().year),
+            f"SUBJ/{date.today().year}/001",
         )
 
     @users("user-cooperator")
@@ -74,7 +74,7 @@ class CooperatorCase(TransactionCase, CooperatorTestMixin):
         reversed_move = self.env["account.move"].browse(action["res_id"])
         self.assertEqual(
             reversed_move.name,
-            "RSUBJ/{year}/001".format(year=date.today().year),
+            f"RSUBJ/{date.today().year}/001",
         )
         self.assertTrue(reversed_move.release_capital_request)
 

@@ -6,7 +6,6 @@ SPDX-FileCopyrightText: 2018 Coop IT Easy SC
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <odoo>
-
     <menuitem
         name="Cooperators"
         id="menu_cooperator_main"
@@ -133,5 +132,4 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         parent="menu_cooperator_config"
         sequence="30"
     />
-
 </odoo>

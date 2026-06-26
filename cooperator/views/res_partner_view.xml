@@ -6,7 +6,6 @@ SPDX-FileCopyrightText: 2018 Coop IT Easy SC
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <odoo>
-
     <record id="view_partner_form" model="ir.ui.view">
         <field name="name">view_partner_form</field>
         <field name="model">res.partner</field>
@@ -244,5 +243,4 @@ SPDX-License-Identifier: AGPL-3.0-or-later
             </field>
         </field>
     </record>
-
 </odoo>

@@ -6,7 +6,6 @@ SPDX-FileCopyrightText: 2018 Coop IT Easy SC
 SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <odoo>
-
     <record id="operation_request_tree" model="ir.ui.view">
         <field name="name">operation.request.tree</field>
         <field name="model">operation.request</field>
@@ -201,5 +200,4 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         <field name="res_model">operation.request</field>
         <field name="view_id" ref="operation_request_tree" />
     </record>
-
 </odoo>
