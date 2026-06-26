@@ -42,7 +42,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     string="Block"
                     aria-label="Block"
                     name="block_subscription_request"
-                    states="draft"
+                    invisible="state != 'draft'"
                     groups="cooperator.cooperator_group_user"
                 />
                 <button
@@ -50,7 +50,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     string="Unblock"
                     aria-label="Unblock"
                     name="unblock_subscription_request"
-                    states="blocked"
+                    invisible="state != 'blocked'"
                     groups="cooperator.cooperator_group_user"
                 />
             </list>
@@ -73,13 +73,13 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                         string="Waiting list"
                         type="object"
                         name="put_on_waiting_list"
-                        states="draft"
+                        invisible="state != 'draft'"
                     />
                     <button
                         string="Cancel"
                         type="object"
                         name="cancel_subscription_request"
-                        states="draft,waiting,done,blocked"
+                        invisible="state not in ['draft','waiting','done','blocked']"
                         groups="cooperator.cooperator_group_user"
                     />
                     <field
