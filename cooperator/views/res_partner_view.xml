@@ -28,57 +28,58 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     <field name="cooperator" invisible="true" />
                     <group
                         groups="cooperator.cooperator_group_user"
-                        attrs="{'invisible': [('cooperator', '=', False)]}"
+                        invisible="not cooperator"
                     >
                         <field
                             name="cooperator_register_number"
-                            attrs="{'invisible': [('member', '=', False)]}"
+                            invisible="not member"
                         />
                         <field name="coop_candidate" />
                         <field name="member" />
                         <field
                             name="cooperator_type"
-                            attrs="{'invisible': [('member', '=', False)]}"
+                            invisible="not member"
                         />
                         <field
                             name="effective_date"
-                            attrs="{'invisible': [('member', '=', False)]}"
+                            invisible="not member"
                         />
                     </group>
                     <group
                         name="approvals"
                         groups="cooperator.cooperator_group_user"
-                        attrs="{'invisible': [('cooperator', '=', False)]}"
+                        invisible="not cooperator"
                     >
                         <field
                             name="internal_rules_approved"
-                            attrs="{'readonly': [('cooperator', '=', False)]}"
+                            readonly="not cooperator"
                         />
                         <field
                             name="data_policy_approved"
-                            attrs="{'readonly': [('cooperator', '=', False)]}"
+                            readonly="not cooperator"
                         />
                         <field
                             name="financial_risk_approved"
-                            attrs="{'readonly': [('cooperator', '=', False)]}"
+                            readonly="not cooperator"
                         />
                         <field
                             name="generic_rules_approved"
-                            attrs="{'readonly': [('cooperator', '=', False)]}"
+                            readonly="not cooperator"
                         />
                     </group>
                     <group>
                         <field
                             name="representative"
-                            attrs="{'invisible': ['|', ('parent_id', '=', False), ('is_company', '=', True)]}"
+                            invisible="not parent_id or is_company"
                         />
                         <field
                             name="legal_form"
-                            attrs="{'invisible': [('is_company', '=', False)]}"
+                            invisible="not is_company"
                         />
                         <field
                             name="company_register_number"
-                            attrs="{'invisible': [('is_company', '=', False)], 'readonly': [('id', '!=', False)]}"
+                            invisible="not is_company"
+                            readonly="not id"
                         />
                     </group>
                 </group>
@@ -88,7 +89,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 <page
                     string="Shares"
                     name="share"
-                    attrs="{'invisible': [('member', '=', False)]}"
+                    invisible="not member"
                     groups="cooperator.cooperator_group_user"
                 >
                     <group>
@@ -115,7 +116,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 <page
                     string="Share subscriptions"
                     name="share_subscription"
-                    attrs="{'invisible': [('cooperator', '=', False)]}"
+                    invisible="not cooperator"
                     groups="cooperator.cooperator_group_user"
                 >
                     <field name="subscription_request_ids">

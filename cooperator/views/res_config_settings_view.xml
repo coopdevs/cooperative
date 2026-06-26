@@ -98,7 +98,7 @@
                                 </div>
                                 <div
                                     class="mt16"
-                                    attrs="{'invisible': [('display_logo1', '=', False)]}"
+                                    invisible="not display_logo1"
                                 >
                                     <div class="content-group">
                                         <div>
@@ -121,7 +121,7 @@
                                 </div>
                                 <div
                                     class="mt16"
-                                    attrs="{'invisible': [('display_logo2', '=', False)]}"
+                                    invisible="not display_logo2"
                                 >
                                     <div class="content-group">
                                         <div>
@@ -221,9 +221,7 @@
                                 </div>
                                 <div class="mt16">
                                     <div class="content-group">
-                                        <div
-                                            attrs="{'invisible': [('display_internal_rules_approval', '=', False)]}"
-                                        >
+                                        <div invisible="not display_internal_rules_approval">
                                             <label
                                                 for="internal_rules_approval_text"
                                                 string="Internal Rules Text"
@@ -234,9 +232,7 @@
                                                 placeholder="These are our internal rules…"
                                             />
                                         </div>
-                                        <div
-                                            attrs="{'invisible': [('display_internal_rules_approval', '=', False)]}"
-                                        >
+                                        <div invisible="not display_internal_rules_approval">
                                             <field
                                                 name="internal_rules_approval_required"
                                             />
@@ -264,9 +260,7 @@
                                 </div>
                                 <div class="mt16">
                                     <div class="content-group">
-                                        <div
-                                            attrs="{'invisible': [('display_data_policy_approval', '=', False)]}"
-                                        >
+                                        <div invisible="not display_data_policy_approval">
                                             <label
                                                 for="data_policy_approval_text"
                                                 string="Data Policy Text"
@@ -277,9 +271,7 @@
                                                 placeholder="This is our data policy…"
                                             />
                                         </div>
-                                        <div
-                                            attrs="{'invisible': [('display_data_policy_approval', '=', False)]}"
-                                        >
+                                        <div invisible="not display_data_policy_approval">
                                             <field
                                                 name="data_policy_approval_required"
                                             />
@@ -307,9 +299,7 @@
                                 </div>
                                 <div class="mt16">
                                     <div class="content-group">
-                                        <div
-                                            attrs="{'invisible': [('display_financial_risk_approval', '=', False)]}"
-                                        >
+                                        <div invisible="not display_financial_risk_approval">
                                             <label
                                                 for="financial_risk_approval_text"
                                                 string="Financial Risk Information Text"
@@ -320,9 +310,7 @@
                                                 placeholder="This is the financial risk…"
                                             />
                                         </div>
-                                        <div
-                                            attrs="{'invisible': [('display_financial_risk_approval', '=', False)]}"
-                                        >
+                                        <div invisible="not display_financial_risk_approval">
                                             <field
                                                 name="financial_risk_approval_required"
                                             />
@@ -350,9 +338,7 @@
                                 </div>
                                 <div class="mt16">
                                     <div class="content-group">
-                                        <div
-                                            attrs="{'invisible': [('display_generic_rules_approval', '=', False)]}"
-                                        >
+                                        <div invisible="not display_generic_rules_approval">
                                             <label
                                                 for="generic_rules_approval_text"
                                                 string="Generic Rules Text"
@@ -363,9 +349,7 @@
                                                 placeholder="These are our generic rules…"
                                             />
                                         </div>
-                                        <div
-                                            attrs="{'invisible': [('display_generic_rules_approval', '=', False)]}"
-                                        >
+                                        <div invisible="not display_generic_rules_approval">
                                             <field
                                                 name="generic_rules_approval_required"
                                             />
@@ -423,7 +407,7 @@
                                 </div>
                                 <div
                                     class="mt16"
-                                    attrs="{'invisible': [('send_certificate_email', '=', False)]}"
+                                    invisible="not send_certificate_email"
                                 >
                                     <div class="content-group">
                                         <div>
@@ -465,7 +449,7 @@
                                 </div>
                                 <div
                                     class="mt16"
-                                    attrs="{'invisible': [('send_confirmation_email', '=', False)]}"
+                                    invisible="not send_confirmation_email"
                                 >
                                     <div class="content-group">
                                         <div>
@@ -498,7 +482,7 @@
                                 </div>
                                 <div
                                     class="mt16"
-                                    attrs="{'invisible': [('send_capital_release_email', '=', False)]}"
+                                    invisible="not send_capital_release_email"
                                 >
                                     <div class="content-group">
                                         <div>
@@ -530,7 +514,7 @@
                                 </div>
                                 <div
                                     class="mt16"
-                                    attrs="{'invisible': [('send_waiting_list_email', '=', False)]}"
+                                    invisible="not send_waiting_list_email"
                                 >
                                     <div class="content-group">
                                         <div>
@@ -563,7 +547,7 @@
                                 </div>
                                 <div
                                     class="mt16"
-                                    attrs="{'invisible': [('send_share_transfer_email', '=', False)]}"
+                                    invisible="not send_share_transfer_email"
                                 >
                                     <div class="content-group">
                                         <div>
@@ -596,7 +580,7 @@
                                 </div>
                                 <div
                                     class="mt16"
-                                    attrs="{'invisible': [('send_share_update_email', '=', False)]}"
+                                    invisible="not send_share_update_email"
                                 >
                                     <div class="content-group">
                                         <div>

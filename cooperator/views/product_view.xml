@@ -22,7 +22,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     invisible="True"
                 />
                 <div
-                    attrs="{'invisible':[('is_share','=',False)]}"
+                    invisible="is_share"
                     groups="cooperator.cooperator_group_user"
                 >
                     <field name="display_on_website" />
@@ -33,7 +33,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 <page
                     string="Share Information"
                     name="share_information"
-                    attrs="{'invisible':[('is_share','=',False)]}"
+                    invisible="not is_share"
                     groups="cooperator.cooperator_group_user"
                 >
                     <group>

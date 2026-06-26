@@ -42,7 +42,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     <group>
                         <field
                             name="partner_id_to"
-                            attrs="{'invisible':[('type','!=','transfer')]}"
+                            invisible="type != 'transfer'"
                         />
                         <field name="type" />
                         <field name="share_to_short_name" />

@@ -35,7 +35,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     string="Validate"
                     aria-label="Validate"
                     name="validate_subscription_request"
-                    attrs="{'invisible':['|',('state','not in',['draft','waiting']),('is_valid_iban','=',False)]}"
+                    invisible="state not in ['draft','waiting'] or not is_valid_iban"
                 />
                 <button
                     type="object"
@@ -67,7 +67,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                         string="Validate"
                         type="object"
                         name="validate_subscription_request"
-                        attrs="{'invisible':['|',('state','not in',['draft','waiting']),('is_valid_iban','=',False)]}"
+                        invisible="state not in ['draft','waiting'] or not is_valid_iban"
                     />
                     <button
                         string="Waiting list"
@@ -93,7 +93,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                         name="web_ribbon"
                         text="Archived"
                         bg_color="bg-danger"
-                        attrs="{'invisible': [('active', '=', True)]}"
+                        invisible="active"
                     />
                     <field name="active" invisible="True" />
                     <group>
@@ -112,19 +112,22 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             <field name="is_operation" invisible="True" />
                             <field
                                 name="company_name"
-                                attrs="{'invisible': [('is_company', '=', False)], 'required': [('is_company', '=', True)]}"
+                                invisible="not is_company"
+                                required="is_company"
                             />
                             <field
                                 name="company_email"
-                                attrs="{'invisible': [('is_company', '=', False)], 'required': [('is_company', '=', True)]}"
+                                invisible="not is_company"
+                                required="is_company"
                             />
                             <field
                                 name="company_type"
-                                attrs="{'invisible': [('is_company', '=', False)]}"
+                                invisible="not is_company"
                             />
                             <field
                                 name="company_register_number"
-                                attrs="{'invisible': [('is_company', '=', False)], 'required': [('is_company', '=', True)]}"
+                                invisible="not is_company"
+                                required="is_company"
                             />
                             <field name="firstname" />
                             <field name="lastname" />
@@ -134,7 +137,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             <field name="phone" />
                             <field
                                 name="contact_person_function"
-                                attrs="{'invisible':[('is_company','=',False)]}"
+                                invisible="not is_company"
                             />
                             <!-- todo highlight iban if not valid -->
                             <field name="iban" />
@@ -169,7 +172,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             <field
                                 name="company_id"
                                 groups="base.group_multi_company"
-                                attrs="{'readonly': [('id', '!=', False)]}"
+                                readonly="id"
                             />
                             <field
                                 name="company_id"
