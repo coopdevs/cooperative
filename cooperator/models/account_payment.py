@@ -12,8 +12,6 @@ class AccountPayment(models.Model):
         "journal_id",
         "partner_id",
         "partner_type",
-        "is_internal_transfer",
-        "destination_journal_id",
         "payment_transaction_id.invoice_ids.subscription_request",
     )
     def _compute_destination_account_id(self):
