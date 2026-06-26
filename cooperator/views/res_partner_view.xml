@@ -233,15 +233,4 @@ SPDX-License-Identifier: AGPL-3.0-or-later
             <p class="o_view_nocontent_neutral_face">No contacts found</p>
         </field>
     </record>
-
-    <record id="remove_partner_follower" model="ir.ui.view">
-        <field name="name">res.partner.remove.follower.inherit</field>
-        <field name="model">res.partner</field>
-        <field name="inherit_id" ref="mail.res_partner_view_form_inherit_mail" />
-        <field name="arch" type="xml">
-            <field name="message_follower_ids" position="attributes">
-                <attribute name="invisible">True</attribute>
-            </field>
-        </field>
-    </record>
 </odoo>
