@@ -115,8 +115,8 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             <field name="share_short_name" readonly="True" />
                             <field
                                 name="share_to_product_id"
-                                invisible="operation_type != convert"
-                                required="operation_type = convert"
+                                invisible="operation_type != 'convert'"
+                                required="operation_type = 'convert'"
                                 readonly="state != 'draft'"
                                 options="{'no_create':True}"
                             />
