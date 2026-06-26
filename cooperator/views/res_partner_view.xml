@@ -17,7 +17,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                         string="Create Subscription"
                         name="%(action_view_create_subscription)d"
                         type="action"
-                        context="{'default_active_id': active_id}"
+                        context="{'default_active_id': id}"
                         groups="cooperator.cooperator_group_user"
                     />
                 </header>

@@ -279,7 +279,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                         string="Update info"
                         name="%(action_view_update_share_line_info)d"
                         type="action"
-                        context="{'default_active_id': active_id}"
+                        context="{'default_active_id': id}"
                         groups="cooperator.cooperator_group_manager"
                     />
                 </header>
