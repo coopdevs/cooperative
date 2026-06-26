@@ -7,10 +7,10 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <odoo>
     <record id="operation_request_tree" model="ir.ui.view">
-        <field name="name">operation.request.tree</field>
+        <field name="name">operation.request.list</field>
         <field name="model">operation.request</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="request_date" />
                 <field name="effective_date" />
                 <field name="partner_id" />
@@ -19,7 +19,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 <field name="user_id" />
                 <field name="state" />
                 <field name="company_id" groups="base.group_multi_company" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -140,7 +140,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             attrs="{'invisible':['|',('operation_type','!=','transfer'),('receiver_not_member','=',False)]}"
                             context="{'default_is_operation': True, 'default_ordered_parts': quantity, 'default_share_product_id': share_product_id, 'default_source': 'operation'}"
                         >
-                            <tree>
+                            <list>
                                 <field name="firstname" />
                                 <field name="lastname" />
                                 <field name="birthdate" />
@@ -148,7 +148,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                                 <field name="email" />
                                 <field name="iban" />
                                 <field name="state" invisible="True" />
-                            </tree>
+                            </list>
                             <form string="Subscription Requests">
                                 <sheet>
                                     <group>

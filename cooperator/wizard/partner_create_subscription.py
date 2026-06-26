@@ -250,7 +250,7 @@ class PartnerCreateSubscription(models.TransientModel):
 
         return {
             "type": "ir.actions.act_window",
-            "view_mode": "form,tree",
+            "view_mode": "form,list",
             "res_model": "subscription.request",
             "res_id": new_sub_req.id,
             "target": "current",

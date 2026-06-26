@@ -7,10 +7,10 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <odoo>
     <record id="subscription_request_tree" model="ir.ui.view">
-        <field name="name">subscription.request.tree</field>
+        <field name="name">subscription.request.list</field>
         <field name="model">subscription.request</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="firstname" />
                 <field name="lastname" />
                 <field name="company_name" />
@@ -53,7 +53,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     states="blocked"
                     groups="cooperator.cooperator_group_user"
                 />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -184,7 +184,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             string="Capital release request"
                         >
                             <field name="capital_release_request">
-                                <tree options="{'no_create':True}">
+                                <list options="{'no_create':True}">
                                     <field name="state" invisible="True" />
                                     <field string="Cooperator" name="partner_id" />
                                     <field name="invoice_date" />
@@ -197,16 +197,12 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                                     <field name="amount_total_signed" />
                                     <field name="amount_residual_signed" />
                                     <field name="payment_state" />
-                                </tree>
+                                </list>
                             </field>
                         </page>
                     </notebook>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers" />
-                    <field name="activity_ids" widget="mail_activity" />
-                    <field name="message_ids" widget="mail_thread" />
-                </div>
+                <chatter/>
             </form>
         </field>
     </record>
@@ -304,10 +300,10 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     </record>
 
     <record id="share_line_tree" model="ir.ui.view">
-        <field name="name">share.line.tree</field>
+        <field name="name">share.line.list</field>
         <field name="model">share.line</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="partner_id" />
                 <field name="share_product_id" />
                 <field name="share_number" />
@@ -315,7 +311,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 <field name="share_unit_price" />
                 <field name="effective_date" />
                 <field name="total_amount_line" />
-            </tree>
+            </list>
         </field>
     </record>
 

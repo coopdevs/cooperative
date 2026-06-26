@@ -96,7 +96,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                         <field name="total_value" />
                     </group>
                     <field name="share_ids">
-                        <tree create="false">
+                        <list create="false">
                             <field name="effective_date" />
                             <field name="share_short_name" />
                             <field name="share_number" sum="Total of shares" />
@@ -109,7 +109,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                                 name="company_id"
                                 groups="base.group_multi_company"
                             />
-                        </tree>
+                        </list>
                     </field>
                 </page>
                 <page
@@ -119,7 +119,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     groups="cooperator.cooperator_group_user"
                 >
                     <field name="subscription_request_ids">
-                        <tree create="false" delete="false" edit="false">
+                        <list create="false" delete="false" edit="false">
                             <field name="share_short_name" />
                             <field name="ordered_parts" sum="Total of shares" />
                             <field name="share_unit_price" />
@@ -133,7 +133,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                                 name="company_id"
                                 groups="base.group_multi_company"
                             />
-                        </tree>
+                        </list>
                     </field>
                 </page>
             </page>
@@ -191,7 +191,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <record id="action_partner_cooperator_form" model="ir.actions.act_window">
         <field name="name">Contacts</field>
         <field name="res_model">res.partner</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">kanban,list,form</field>
         <field name="context">
             {
                 "create": False,
@@ -206,7 +206,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <record id="action_partner_cooperator_candidate_form" model="ir.actions.act_window">
         <field name="name">Contacts</field>
         <field name="res_model">res.partner</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">kanban,list,form</field>
         <field name="context">
             {
                 "create": False,
@@ -221,7 +221,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <record id="action_company_representative_form" model="ir.actions.act_window">
         <field name="name">Contacts</field>
         <field name="res_model">res.partner</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">kanban,list,form</field>
         <field name="context">
             {
                 "create": False,
