@@ -295,9 +295,7 @@ class ResCompany(models.Model):
                     )
 
     def _accounting_data_initialized(self):
-        return self.chart_template_id or self.env[
-            "account.chart.template"
-        ].existing_accounting(self)
+        return self.chart_template
 
     def _init_cooperator_data(self):
         """
